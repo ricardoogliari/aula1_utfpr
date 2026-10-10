@@ -9,9 +9,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Center(child: Text('Aula 1 - DevOps/Pós Móveis UTFPR'))),
+    return MaterialApp(
+      home: Scaffold(body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Aula 1 - DevOps/Pós Móveis UTFPR'),
+            const SizedBox(height: 16,),
+            ElevatedButton(onPressed: (){ showDialog(context: context, builder: (context) => const AlertDialog(content: Text('Oh, você clicou mesmo!'),),);}, child: const Text('Clique aqui!')),
+          ]
+        )
+      )),
     );
   }
 }
