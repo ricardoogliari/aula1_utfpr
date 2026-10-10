@@ -9,8 +9,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      home: Scaffold(body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text('Hello World'),
+            const SizedBox(height: 16,),
+            ElevatedButton(onPressed: (){ showDialog(context: context, builder: (context) => const AlertDialog(content: Text('Oh, você clicou mesmo!'),),);}, child: const Text('Clique aqui!')),
+          ]
+        )
+      )),
     );
   }
 }
