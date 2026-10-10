@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Hello World'),
+            const Text('Aula 1 - DevOps/Pós Móveis UTFPR'),
             const SizedBox(height: 16,),
             ElevatedButton(onPressed: (){ showDialog(context: context, builder: (context) => const AlertDialog(content: Text('Oh, você clicou mesmo!'),),);}, child: const Text('Clique aqui!')),
           ]
