@@ -9,6 +9,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('passou aqui');
     return MaterialApp(
       home: Scaffold(body: Center(
         child: Column(
